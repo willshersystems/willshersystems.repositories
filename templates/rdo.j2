@@ -1,0 +1,8 @@
+# {{ ansible_managed }}
+[openstack-{{ rdo_release }}]
+name=OpenStack {{ rdo_release|upper }} Repository
+baseurl=http://repos.fedorapeople.org/repos/openstack/openstack-{{ rdo_release }}/el7/
+skip_if_unavailable=0
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-RDO-{{ rdo_release }}

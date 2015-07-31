@@ -5,8 +5,8 @@
 
 - name: Copy {{ name }} repository file into place
   template:
-    src: "{{ item }}"
-    dest: /etc/yum.repos.d/{{ item }}
+    src: "{{ item }}.j2"
+    dest: /etc/yum.repos.d/{{ item }}.repo
     owner: root
     group: root
     mode: 0644

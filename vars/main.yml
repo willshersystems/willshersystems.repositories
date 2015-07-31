@@ -2,28 +2,33 @@
 repositories:
   epel:
     files:
-      - epel.repo
-      - epel-testing.repo
+      - epel
+      - epel-testing
     package: epel-release
     signing_key: RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
   jpackage:
     files:
-      - jpackage.repo
+      - jpackage
     signing_key: RPM-GPG-KEY-jpackage
   spacewalk:
     files:
-      - spacewalk.repo
+      - spacewalk
     signing_key: RPM-GPG-KEY-spacewalk-2012
   ius:
     files:
-      - ius.repo
+      - ius
     package: ius-release
     signing_key: IUS-COMMUNITY-GPG-KEY
+  rdo-kilo:
+    files:
+      - rdo-release
+    package: rdo-release-kilo
+    signing_key: RPM-GPG-KEY-RDO-kilo
   nginx:
     files:
-      - nginx.repo
+      - nginx
   puppetlabs:
     files:
-      - puppetlabs.repo
+      - puppetlabs
     signing_key: RPM-GPG-KEY-puppetlabs
     package: puppetlabs-release

@@ -1,7 +1,7 @@
-yum_repo Role
+repositories Role
 =============
 
-The yum_repo role is a general purpose role to configure common yum repositories. 
+The repositories role is a general purpose role to configure common yum repositories.
 Depending on the repository, a number of different options are available.
 To install repository defaults, as defined by the repository manager, simply calling the role
 with the repository name, unless otherwise noted below.
@@ -15,7 +15,10 @@ e.g.
 ---
 hosts: all
 roles:
-  - { role: yum_repo, name: epel, epel_stable: 0, epel_testing: 1 }
+  - role: repositories
+    name: epel
+    epel_stable:
+    epel_testing: 1
 ```
 
 Supported repositories
@@ -40,7 +43,7 @@ Default enable repositories - set to 0 to disable
 
 Disabled repositories - set to 1 to enable
 
-* *epel_testing* 
+* *epel_testing*
 * *epel_source*
 * *epel_debuginfo*
 * *epel_testing_source*
@@ -75,4 +78,3 @@ The [Spacewalk](http://spacewalk.redhat.com) repository contains packages for th
 Default enable repositories - set to 0 to disable
 
 * *spacewalk_stable*
-

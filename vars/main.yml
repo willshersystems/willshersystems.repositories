@@ -22,7 +22,7 @@ repositories:
   rdo-kilo:
     files:
       - rdo-release
-    package: rdo-release-kilo
+    package: https://repos.fedorapeople.org/repos/openstack/openstack-kilo/rdo-release-kilo-1.noarch.rpm
     signing_key: RPM-GPG-KEY-RDO-kilo
   nginx:
     files:
